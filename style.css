@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+.bottom-controls {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="text"], select, textarea {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+textarea {
+  width: 90%;
+  height: 100px;
+  resize: none;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.roulette-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.roulette {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.roulette h2 {
+  margin: 0 0 10px;
+}
+
+.roulette ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.roulette-item {
+  background: #eee;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 80px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.result {
+  font-size: 1.2em;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+body.dark .roulette {
+  background-color: #333;
+}
+
+body.dark .roulette-item {
+  background: #444;
+  color: #fff;
+}

@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ルーレットアプリ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>ルーレットアプリ</h1>
+    <div class="mode-toggle">
+      <label>
+        <input type="checkbox" id="darkModeToggle" /> ダークモード
+      </label>
+    </div>
+    <div class="controls">
+      <input type="text" id="newItem" placeholder="要素を追加" />
+      <button onclick="addItem()">追加</button>
+      <select id="rouletteSelector" onchange="switchRoulette()"></select>
+      <button onclick="addRoulette()">ルーレット追加</button>
+    </div>
+    <div id="rouletteList" class="roulette-list"></div>
+    <div class="bottom-controls">
+      <button onclick="spinAll()">すべて回す</button>
+      <button onclick="saveCode()">コード保存</button>
+      <button onclick="loadCode()">コード読み込み</button>
+      <button onclick="saveToLocalStorage()">ローカルに保存</button>
+      <button onclick="loadFromLocalStorage()">ローカルから読み込み</button>
+      <textarea id="codeArea" placeholder="ここにコードを入力・保存"></textarea>
+    </div>
+    <div class="result" id="resultDisplay"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
