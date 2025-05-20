@@ -50,13 +50,9 @@ function updateRouletteSelector() {
 function addItem() {
   const input = document.getElementById("newItem");
   if (input.value.trim()) {
-    if (roulettes[currentRoulette].length < 10) {
-      roulettes[currentRoulette].push(input.value.trim());
+    roulettes[currentRoulette].push(input.value.trim());
       input.value = "";
       renderList();
-    } else {
-      alert("このルーレットは最大10要素までです");
-    }
   }
 }
 
